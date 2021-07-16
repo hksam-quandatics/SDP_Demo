@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_7n9q4eYdEeuxx4djLXSQnA" label="Sime_Darby_Property" language="java" technicalLabel="SIME_DARBY_PROPERTY" author="_7n9q4uYdEeuxx4djLXSQnA" productVersion="Talend Cloud Data Management Platform-7.3.1.20210623_0656-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/hksam-quandatics/SDP_Demo&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" bigData="false">
+    <migrationTask xmi:id="_7pwaoOYdEeuxx4djLXSQnA" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_7n9q4uYdEeuxx4djLXSQnA" login="williamchong@eval12898.talend.com" firstName="William" lastName="Chong" type="DQ"/>
+</xmi:XMI>
