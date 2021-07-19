@@ -12,6 +12,7 @@
     <module>code/routines</module>
     <module>jobs/process/a_claims_submission_0.1</module>
     <module>jobs/process/apitestconnection_0.1</module>
+    <module>jobs/process/b_document_submission_0.1</module>
     <module>jobs/process/masterjob_0.1</module>
   </modules>
   <properties>
