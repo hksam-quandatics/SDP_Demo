@@ -39,6 +39,10 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_MeTpIOSuEeuXL6oPtoOpOA - pm_certificate",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
     "id" : "_MeTpIOSuEeuXL6oPtoOpOA - pm_claims",
     "version" : "Latest",
     "type" : "schema"
