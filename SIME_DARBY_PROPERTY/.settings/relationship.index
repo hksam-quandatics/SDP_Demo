@@ -35,11 +35,11 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_MeTpIOSuEeuXL6oPtoOpOA",
+    "id" : "SIME_DARBY_PROPERTY:_fNW34OoBEeunQKBDUNdGRg",
     "version" : "Latest",
-    "type" : "property"
+    "type" : "job"
   }, {
-    "id" : "_wphJAOSsEeuXL6oPtoOpOA",
+    "id" : "_MeTpIOSuEeuXL6oPtoOpOA",
     "version" : "Latest",
     "type" : "property"
   }, {
