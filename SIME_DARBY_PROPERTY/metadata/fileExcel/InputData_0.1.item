@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:FileExcelConnection Encoding="UTF-8" FilePath="C:/Users/Administrator/Desktop/test.xlsx" FirstLineCaption="true" HeaderValue="1" Server="Localhost 127.0.0.1" SheetName="Sheet1" UseHeader="true" dataPackage="_N1ZkAen1Eeup0bOfk4c1_g" decimalSeparator="'.'" firstColumn="1" name="InputData" selectAllSheets="true" sheetList="Sheet1:w&#10;" thousandSeparator="','" xmi:id="_N1ZkAOn1Eeup0bOfk4c1_g">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile dataManager="_N1ZkAOn1Eeup0bOfk4c1_g" name="default" xmi:id="_N1ZkAen1Eeup0bOfk4c1_g">
+    <ownedElement id="_7ci9YOn0Eeup0bOfk4c1_g" label="metadata" xmi:id="_N1ZkAun1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataTable">
+      <feature key="true" label="ClaimsID" length="10" name="ClaimsID" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkA-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkBOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="ProjectID" length="10" name="ProjectID" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkBen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkBun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="ClaimsAmount" length="15" name="ClaimsAmount" precision="2" sourceType="DECIMAL" talendType="id_BigDecimal" xmi:id="_N1ZkB-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkCOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="CertificateID" length="10" name="CertificateID" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkCen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkCun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="RecordStatus" length="45" name="RecordStatus" sourceType="VARCHAR" talendType="id_String" xmi:id="_N1ZkC-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkDOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="CreateDate" length="19" name="CreateDate" pattern="&quot;dd-MM-yyyy&quot;" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_N1ZkDen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue body="CURRENT_TIMESTAMP" xmi:id="_N1ZkDun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="CreateUserID" length="10" name="CreateUserID" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkD-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkEOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="UpdateDate" length="19" name="UpdateDate" pattern="&quot;dd-MM-yyyy&quot;" sourceType="TIMESTAMP" talendType="id_Date" xmi:id="_N1ZkEen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue body="CURRENT_TIMESTAMP" xmi:id="_N1ZkEun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="UpdateUserID" length="10" name="UpdateUserID" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkE-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkFOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="BankName" length="45" name="BankName" sourceType="VARCHAR" talendType="id_String" xmi:id="_N1ZkFen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkFun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="BankAccount" length="45" name="BankAccount" sourceType="VARCHAR" talendType="id_String" xmi:id="_N1ZkF-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkGOn1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="BankIBAN" length="45" name="BankIBAN" sourceType="VARCHAR" talendType="id_String" xmi:id="_N1ZkGen1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkGun1Eeup0bOfk4c1_g"/>
+      </feature>
+      <feature label="ProgressActual" length="10" name="ProgressActual" sourceType="INT" talendType="id_Integer" xmi:id="_N1ZkG-n1Eeup0bOfk4c1_g" xsi:type="TalendMetadata:MetadataColumn">
+        <initialValue xmi:id="_N1ZkHOn1Eeup0bOfk4c1_g"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3a9f21e2-5f73-45fa-b94c-a997a670077e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2Upu45MAlT5vKm6lfiT2i/5GRK58pSDmSyoCazY5tvQxgU7IgmHuouX0XLz3k7o+7xKigjYMeKJ8
+BjTQkBLWHA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2efe50cf-5cd2-4946-9f7c-82b6ba0a6edf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K1Dg7cH4DdlPNsjB/Bea+QWJqHbmMoN8l5K3gRfMY0cpE6iHZfpLFMEHt4T5tmBDZEUU34WGSe4N
+JxAVLVPCQg==</DigestValue></Reference></SignedInfo><SignatureValue>YPMfcqY8XNlYeHlwJg2px36AQtaNGyZyakxKt30LLKVIpKiw8YGzEc0VeYQmdECbLAlT6JmYa3dH
+l1XIofky4HYj3AMKcFogjBF7QByyJw8fbaSkN8fq4JmifXZqEtcvPal88/koiz2sJieVYloQr2tH
+Gzg3UW01m8HVL3OSg6IOiVytiQQhcoSREAyz5xuUYYN4xdmbfK4OAZU5ENqpeXHoEVgmNlHW498l
+IIz/az3GoTFWXdVo2qkcifMSVwKJnzKHRbbZ/PUpHuFkPHMAfmx/VQEqCQYRwcnXcrhoOXWQB2wO
+fJl5uvg8DEdWxf287jieyMKKPxaOYzrL7kvWrg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2efe50cf-5cd2-4946-9f7c-82b6ba0a6edf" Target="#_3a9f21e2-5f73-45fa-b94c-a997a670077e"><Timestamp>2021-07-21 07:28:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
