@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hp7V82JgBKO+WLKIzPD1wVeazFrthYmFttjrtfnX"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:fsjytKY+FIr6CjvWfeoUi9jtwK9ZUawspDCKG5Pw"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:WRDHm3bwm5uaQJUDCUxr3mYyiQJp7LFwMABFPa8u"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:iDWqJnq9INB5UW3UzxLAQRy0kLEwE1XsLv3cKRjV"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -241,7 +241,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5Ve+69zVZd3ID67b4f40VfAoUE8WBAh+1vLG9Cx2m9TIoMDW18ck1eKNc+WFqqjIwDubngHnkQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yFv0EXVWasl34mpMX6jqzg0zjxeM0DdQHBl/4lxWdHwr2wBZhQxIBxwdCJcWs7qBCIQ/a2+D1A=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeTpIOSuEeuXL6oPtoOpOA - pm_claims"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_claims&quot;"/>
@@ -477,6 +477,10 @@
       <column comment="" key="false" length="45" name="CertificateSerialNo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="ProgressActual" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ProjectProgress" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
     <metadata connector="FLOW" name="RejectedCertificate">
       <column comment="" key="false" length="45" name="CertificateSerialNo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -489,6 +493,8 @@
       <outputTables name="ValidCertificate" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.ProjectID " name="ProjectID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.CertificateSerialNo" name="CertificateSerialNo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.ProgressActual " name="ProgressActual" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.ProjectProgress " name="ProjectProgress" nullable="true" type="id_Integer"/>
       </outputTables>
       <outputTables columnNameFilter="" name="RejectedCertificate" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.CertificateSerialNo " name="CertificateSerialNo" nullable="true" type="id_String"/>
@@ -504,13 +510,13 @@
         <mapperTableEntries name="BankIBAN" nullable="true" type="id_String"/>
         <mapperTableEntries name="ProgressActual" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="CertificateID" type="id_Integer"/>
         <mapperTableEntries expression="" name="CertificateSerialNo" nullable="true" type="id_String"/>
         <mapperTableEntries name="CertificateIssueDate" nullable="true" type="id_Date"/>
         <mapperTableEntries name="ArchitectID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="Integer.getInteger(row1.ProjectID) " name="ProjectID" nullable="true" operator="=" type="id_Integer"/>
-        <mapperTableEntries expression="" name="ProjectProgress" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="Integer.getInteger(row1.ProgressActual)" name="ProjectProgress" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="" name="RecordStatus" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
@@ -527,7 +533,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:YcStVR/M5jgZ1lQcc5Xc+Y2lUMgegvbqxHax73XoMamaSLS1HucPCznkT61ZUM2N1K/3PL5VlA=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NxgMvqTmbMY+ozNQHOI1jJt3q15ExVnAKo2B6KwyCYBGtL5ogryxghX6kCBOEmHOQP0piCQk9A=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeTpIOSuEeuXL6oPtoOpOA - pm_certificate"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_certificate&quot;"/>
@@ -606,6 +612,10 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CertificateSerialNo"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProgressActual"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectProgress"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -613,6 +623,10 @@
     <metadata connector="FLOW" name="tLogRow_1">
       <column comment="" key="false" length="-1" name="ProjectID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="45" name="CertificateSerialNo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="ProgressActual" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="ProjectProgress" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -707,6 +721,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="ProjectID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProjectProgress"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ProgressActual"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ValidCertificate"/>
@@ -774,13 +794,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c58bb18f-92a7-4afd-90c3-ba4f13555ecb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bOn9Yo+6vKC7aT0RvF6up4sBM/1w6sfblr6xqpeNQ/e1+pkK6wlAt1nEn9GvQtLKdD68tReSN7X6
-oP9vKrvqlw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_399d237d-21c8-483b-bd98-ffbd56af0c07"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>grqdxBUKs9lS0UvnBqqI8fDuKNm/WLnBe4q8NuKKUlMOlf8dNfbDk6qd0K9sw1sCn6iqChYTimu+
-3tanBJuznQ==</DigestValue></Reference></SignedInfo><SignatureValue>i8CAwzF0g4NjhOXw2sQQ7Kh1cYg+U9VCn/8yqEH8Z1y6FKbK+YVHScLf7lS7n70KkQhOpLHCa1MV
-v4tTkH0VBAaz6xUAp1O2qI+TCTc6hCe8Fo2A7vOOcT2Aboay7CMZbSD5NPjDMAJ1zNsejhRxEmVa
-mVMUskKkF5Jtsj8nLLtPM5Dns0muWdRNEwOq9yUtiBdtwQXW5S0JiWcUx+5RsCDcN8Y99DECQaj/
-9wAd6eb/sGXKWh1U2Memj5xDPSI0DG9Xk4oLeTqJ+DAwHZ9CgQ36Ts55k99T1OHAz84Ape0FflVm
-yKgDSYFpiw5cURk3utBkd60Eq8QQAR7GbBhqZA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2563d166-7c02-4d20-853e-c8fe4cdef106"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9hxJn54NeNRKiHdpY6OEsV8eTvzkEkkeUDcm55Buc9NoWdwvsrTE9UTXz7hPFZB25q/pcO/OjCam
+ZkhNjTVK3Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_44939ddb-2524-4779-8432-b80725fe3bf7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Lg+H4DRb1KhTxxsqT+HOXprmxSQG+1xFB+fWIKth3R3obUobginljqJ+Uc9tFtwAXcPM744b3wWy
+IyyTanpr2A==</DigestValue></Reference></SignedInfo><SignatureValue>A3CG8WgAjWHj9haOUxLw2iSI0oBxkd7MJ9Qsz97dMkDUI8Ni5dDi0WHAsHy817a3xLd4nsKHgb2H
+r4dkEU9MEl/1XWFayPE6t7fHRQE3j0UCcXbAsiSn1H31YT+3V0spvYNZgkGYK/wpJhqF53knx0nl
+nr7pAz5v1zh192bT52bRc0+rK5U//WBU30vrTgjlPzSRehFdyLZplNwrb1cZPdP2fr3y9wQHDaeH
+xo9lQdXYUJFXAh+mMaCbHBs3EQG4TggPAu+SSgq9KbFcVnACyDlQUIdXpMxpSqPe2HDJS4d1S74j
+tQ59VXP0+cBWlBdSqwetB3Oi8+9NQDDmZ4vr/A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -802,4 +822,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_399d237d-21c8-483b-bd98-ffbd56af0c07" Target="#_c58bb18f-92a7-4afd-90c3-ba4f13555ecb"><Timestamp>2021-07-21 08:15:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_44939ddb-2524-4779-8432-b80725fe3bf7" Target="#_2563d166-7c02-4d20-853e-c8fe4cdef106"><Timestamp>2021-07-21 08:16:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
