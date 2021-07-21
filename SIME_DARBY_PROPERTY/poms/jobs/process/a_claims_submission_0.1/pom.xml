@@ -154,16 +154,6 @@
     </dependency>
     <dependency>
       <groupId>org.example.sime_darby_property.job</groupId>
-      <artifactId>Project_Contractor_List</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sime_darby_property.job</groupId>
-      <artifactId>Project_Claims_List</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sime_darby_property.job</groupId>
       <artifactId>Project_Progress_List</artifactId>
       <version>0.1.0</version>
     </dependency>
