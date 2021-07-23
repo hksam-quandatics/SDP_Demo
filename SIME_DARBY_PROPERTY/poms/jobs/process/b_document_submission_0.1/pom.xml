@@ -409,12 +409,12 @@
     </dependency>
     <dependency>
       <groupId>org.example.sime_darby_property.job</groupId>
-      <artifactId>Retrieve_Process_BLOB</artifactId>
+      <artifactId>Project_Claims_List</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.sime_darby_property.job</groupId>
-      <artifactId>Project_Claims_List</artifactId>
+      <artifactId>Retrieve_Process_BLOB</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
