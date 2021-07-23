@@ -19,6 +19,7 @@
     <module>jobs/process/apitestconnection_0.1</module>
     <module>jobs/process/b_document_submission_0.1</module>
     <module>jobs/process/masterjob_0.1</module>
+    <module>jobs/process/reset_environment_0.1</module>
     <module>jobs/process/retrieve_process_blob_0.1</module>
     <module>jobs/process/webhook_trigger_0.1</module>
   </modules>
