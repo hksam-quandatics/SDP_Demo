@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" internalId="_U_TQAOojEeu5crR_iIBs7A" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:LTR9+6ZUaY1WPfji6QadKxzFye7JGJA3b/jCd3JZnYOMLgU4UVbSYWgctpWSZSieJijqRmVJ0+uqh/IR4bTd6fMyFc4TfLTZWvzE8NJf8GXsxg=="/>
+    <contextParameter comment="" internalId="_w7j0oOolEeu5crR_iIBs7A" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:2R7H6Mu6U7I0ASdkfnyK383Jo2mpCYrZAp8EF657dmGpnGxTniGuk3gfME+MyFTgHi2zfcxxoEBOXJN7rQlLf4jmjNwO97eeQ/ggEbvsmqQR7A=="/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:zJQRq3cplgPuVh+/n8t0xYKMvcrSQVWOGJrOt9GM"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sInL6WLFc92C3iRJVAyEuEWemnyceShWYg6+uFaY"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y9lJPMfF9RuMPaIfSx5ST9RuE4SY43vTD14r/tZU"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:7Pk//8TIvd2bPNCUaDY2x3YuDQLV9/CDHmXNCq1y"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -117,7 +117,7 @@
   </parameters>
   <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://middlewareapitalend.azurewebsites.net/api/project-claim-list/?format=json&quot;"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://middlewareapitalend.azurewebsites.net/api/project-progress-list/?format=json&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
@@ -147,15 +147,15 @@
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectClaim"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectProgress"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Amount"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ActualPercentage"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Progress"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BudgetPercentage"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
@@ -163,7 +163,7 @@
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ClaimStatus"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectStatus"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
@@ -181,16 +181,16 @@
       <elementValue elementRef="QUERY" value="&quot;$.id&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Date"/>
       <elementValue elementRef="QUERY" value="&quot;$.Date&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectClaim"/>
-      <elementValue elementRef="QUERY" value="&quot;$.ProjectClaim&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Amount"/>
-      <elementValue elementRef="QUERY" value="&quot;$.Amount&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Progress"/>
-      <elementValue elementRef="QUERY" value="&quot;$.Progress&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectProgress"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ProjectProgress&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ActualPercentage"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ActualPercentage&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BudgetPercentage"/>
+      <elementValue elementRef="QUERY" value="&quot;$.BudgetPercentage&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Project"/>
       <elementValue elementRef="QUERY" value="&quot;$.Project&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ClaimStatus"/>
-      <elementValue elementRef="QUERY" value="&quot;$.ClaimStatus&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectStatus"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ProjectStatus&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Body"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_CODE"/>
@@ -208,22 +208,22 @@
     <metadata connector="FLOW" name="tExtractJSONFields_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProjectClaim" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Amount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Progress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectProgress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ActualPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BudgetPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Project" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ClaimStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProjectClaim" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Amount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Progress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectProgress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ActualPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BudgetPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Project" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ClaimStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -236,7 +236,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_EwISsOojEeu5crR_iIBs7A-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_7eT9oOYzEeuxx4djLXSQnA-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -245,45 +245,43 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="valid">
+    <metadata connector="FLOW" name="Progress">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProjectClaim" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Amount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Progress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectProgress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ActualPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BudgetPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Project" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ClaimStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="CL_error">
+    <metadata connector="FLOW" name="PL_error">
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables name="Var" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="listextracted.ClaimStatus == null ? 0 : listextracted.ClaimStatus" name="Var_ClaimStatus" type="id_Integer"/>
-      </varTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="listextracted.ERROR_CODE == null" name="valid" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="listextracted.id " name="id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted.Date " name="Date" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="listextracted.ProjectClaim " name="ProjectClaim" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted.Amount " name="Amount" nullable="true" type="id_Double"/>
-        <mapperTableEntries expression="listextracted.Progress " name="Progress" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted.Project " name="Project" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted.ClaimStatus " name="ClaimStatus" nullable="true" type="id_Integer"/>
+      <uiProperties/>
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="listextracted1.ERROR_CODE == null" name="Progress" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="listextracted1.id " name="id" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.Date " name="Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="listextracted1.ProjectProgress " name="ProjectProgress" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.ActualPercentage " name="ActualPercentage" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.BudgetPercentage " name="BudgetPercentage" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.Project " name="Project" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.ProjectStatus " name="ProjectStatus" nullable="true" type="id_Integer"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="listextracted.ERROR_CODE != null" name="CL_error" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="listextracted.Body " name="Body" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted.ERROR_CODE " name="ERROR_CODE" nullable="true" type="id_Integer"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="listextracted1.ERROR_CODE != null" name="PL_error" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="listextracted1.Body" name="Body" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted1.ERROR_CODE" name="ERROR_CODE" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="listextracted" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="listextracted1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="id" nullable="true" type="id_String"/>
         <mapperTableEntries name="Date" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="ProjectClaim" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Amount" nullable="true" type="id_Double"/>
-        <mapperTableEntries name="Progress" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ProjectProgress" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ActualPercentage" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BudgetPercentage" nullable="true" type="id_String"/>
         <mapperTableEntries name="Project" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ClaimStatus" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="ProjectStatus" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Body" nullable="true" type="id_String"/>
         <mapperTableEntries name="ERROR_CODE" nullable="true" type="id_Integer"/>
       </inputTables>
@@ -293,7 +291,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;globalMap.put(&quot;BodyMessage&quot;, input_row.Body);&#10;globalMap.put(&quot;ErrorCode&quot;, input_row.ERROR_CODE);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="CL_error"/>
+    <elementParameter field="TEXT" name="LABEL" value="PL_error"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -302,21 +300,21 @@
   </node>
   <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
-    <elementParameter field="TEXT" name="LABEL" value="claimstatus"/>
+    <elementParameter field="TEXT" name="LABEL" value="Progress"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tBufferOutput_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ProjectClaim" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Amount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Progress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectProgress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ActualPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BudgetPercentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Project" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ClaimStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectStatus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;API project-claim-list failed to retrieve. Error Message: &quot; + (String)globalMap.get(&quot;BodyMessage&quot;)"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;API project-progress-list failed to retrieve. Error Message: &quot; + (String)globalMap.get(&quot;BodyMessage&quot;)"/>
     <elementParameter field="TEXT" name="CODE" value="(Integer)globalMap.get(&quot;ErrorCode&quot;) "/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
     <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
@@ -324,30 +322,30 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <connection connectorName="FLOW" label="claimlist" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
+  <connection connectorName="FLOW" label="progresslist" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="claimlist"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="progresslist"/>
   </connection>
-  <connection connectorName="FLOW" label="listextracted" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tMap_1">
+  <connection connectorName="FLOW" label="listextracted1" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="listextracted"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="listextracted1"/>
   </connection>
-  <connection connectorName="FLOW" label="valid" lineStyle="0" metaname="valid" offsetLabelX="-28" offsetLabelY="50" outputId="1" source="tMap_1" target="tBufferOutput_1">
+  <connection connectorName="FLOW" label="Progress" lineStyle="0" metaname="Progress" offsetLabelX="-32" offsetLabelY="50" outputId="1" source="tMap_1" target="tBufferOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="valid"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Progress"/>
   </connection>
-  <connection connectorName="FLOW" label="CL_error" lineStyle="0" metaname="CL_error" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJavaRow_1">
+  <connection connectorName="FLOW" label="PL_error" lineStyle="0" metaname="PL_error" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="CL_error"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="PL_error"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJavaRow_1" offsetLabelX="-8" offsetLabelY="19" source="tJavaRow_1" target="tDie_1">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tDie_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tJavaRow_1_NB_LINE&quot;)) &gt; 0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Validate API Project Claim List"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Validate API Project Progress List"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -358,13 +356,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4d375e6a-3f8c-40bf-9a57-b92b72e5a08f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7r7gZsx12A+K1OvnoajNa0Q2fe787PxVfwaw+H+bNXgiGGoOX6sYfqPD8Pq0ewxkfQpCbgXffIPN
-fnmjn7sgSg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e6848744-c3d2-4352-ad60-d7213e7c3198"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3qFAvGCnQxx4BlcoiRe9VFLmWSqNLJhCTz7eoXGIqOrkWSHJLTtWc6nLorGKRLm7htc3LPkqzpa0
-4Cdiq1mh6A==</DigestValue></Reference></SignedInfo><SignatureValue>l3M8O2m6lIL9EqVifHh/C+9nrw6LUwT4rA2uxZCVdpoPFi0lmEESMw60ONxAqd7D5Z4b71uzMpnK
-G9CU2C3qELnE3SLeuQbjognoRTpulZ6u++axGVKOZ9HI38FEJmBE/Cjb1U+xHUtGEy2z981/e7ms
-53c0p1FbQpjU05ZRvGM5pfrR/IU6wCEI6m7z2DkBZBDZ/9siJiEruO7Y2GJDZWY4hDz3O0UOhjv4
-M8lUEcRJt9/903mL39Pmuzb35l/mVT5mKtzCVmH5CZDB3nY3QNVDthLSwuzVVmgMk0m8bJk/7RGl
-K1hMsLp0BbqrloBwlXsJ0A3o/HSBM2FSMnIyIA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ad8a5c8-e7f7-46c1-8a2d-4d83c20115a3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AyFWICqsKgRVBLYsyZ7XKvnRD+d4h553xoCe0xSCvwVKQ21twfybXJ4feWtczBv0opho4v+uR+ak
+IoZSjTuR/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_12eecd4f-997a-4c1d-87c9-56c20a4d1c16"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nrwIbLTeMbUEPjib5+sJgzoLM5tgVG+Y5SYi4dcTuZ1uFUYi5F1ShG//ss5vgU9sYyU4ivLsFiYf
+5uKAmgUg3A==</DigestValue></Reference></SignedInfo><SignatureValue>TE7ZpwUn7YI1ckbtGsjmAEwTNfwM3x72XBrpXF8Na7iAAgcddgK50F6Ab14piWTLDecfJhlRU1dd
+WYad88MFZ0l4yS2hnyqfslEyrP0Lths24wqey5e2O90kreA6Thfb271w7HxcdNRosRVg/4b+BZks
+s7sZ9jUqNCT7G8Jhpc6I0L9WDQjUl7BBB8i9HhVjgiNZOnYoZd3a9ZsLTOkykCnH7Y0AqbFbO1Pn
+bPsM8GiXceQfZcX1CO/185j9LngdaDKeA9k87b9mfuhIUx0WSBx0Xc1ZdBIFOs8bzUIdJuVSLN6k
+YtxH+xIW8YSjHH5kd/c2BDbNUdhNZ5k72p5M6Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -386,4 +384,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e6848744-c3d2-4352-ad60-d7213e7c3198" Target="#_4d375e6a-3f8c-40bf-9a57-b92b72e5a08f"><Timestamp>2021-07-21 13:19:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_12eecd4f-997a-4c1d-87c9-56c20a4d1c16" Target="#_2ad8a5c8-e7f7-46c1-8a2d-4d83c20115a3"><Timestamp>2021-07-23 01:30:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

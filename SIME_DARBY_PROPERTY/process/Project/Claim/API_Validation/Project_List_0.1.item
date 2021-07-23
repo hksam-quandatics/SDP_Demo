@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" internalId="_byooMOonEeu5crR_iIBs7A" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:G2zrmtQYrWpNU4QdAh+eDZf8vVS22GcWLl5oe1SPrV9I2dEAeQuPj+JcF7Bv/yG5dN6N/sWUJoM/cR2XFIhu7MQfIlXq4TEF+fqcPbitNqbK8A=="/>
+    <contextParameter comment="" internalId="_zty2QOomEeu5crR_iIBs7A" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:Ny02J1HeyHuQMqGXkUOO/kACIed/kHThknXih+OOWF5NZrNDZZYnREOosdb+Xcsm+Zzw7ZWgXCFQ7NMW7LGEKrer/A+tEIIxPxftZOVztFeDhQ=="/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:n/CKVP1A2q3NIAVE++rBC9xv0rbzg5Vi7noyfWpP"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:oWifJDtAdIKKjX7YvQ0FNreWmmp0qrGDVEl/c00x"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+xbVdPXuN0dPfg7gN9JTPqdR6QnPHQjPBNdQaN1Y"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:bQnX7jn8aSbl09UQBbe+D3ejwszDUnwJ4/kqG2c0"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -117,7 +117,7 @@
   </parameters>
   <node componentName="tREST" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://middlewareapitalend.azurewebsites.net/api/contractor-list/?format=json&quot;"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://middlewareapitalend.azurewebsites.net/api/project-list/?format=json&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
     <elementParameter field="TABLE" name="HEADERS">
       <elementValue elementRef="NAME" value="&quot;Authorization&quot;"/>
@@ -143,11 +143,15 @@
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ContractorNo"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectContractNo"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ContractorName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectName"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectValue"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="NODECHECK" value="false"/>
       <elementValue elementRef="ISARRAY" value="false"/>
@@ -163,10 +167,12 @@
     <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="QUERY" value="&quot;$.id&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ContractorNo"/>
-      <elementValue elementRef="QUERY" value="&quot;$.ContractorNo&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ContractorName"/>
-      <elementValue elementRef="QUERY" value="&quot;$.ContractorName&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectContractNo"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ProjectContractNo&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectName"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ProjectName&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProjectValue"/>
+      <elementValue elementRef="QUERY" value="&quot;$.ProjectValue&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Body"/>
       <elementValue elementRef="QUERY" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_CODE"/>
@@ -183,15 +189,17 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tExtractJSONFields_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectContractNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectValue" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectContractNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectValue" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -204,7 +212,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_GtO7wOonEeu5crR_iIBs7A-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_7eT9oOYzEeuxx4djLXSQnA-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -213,31 +221,34 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="Contractor">
+    <metadata connector="FLOW" name="Project">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectContractNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectValue" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="ConL_error">
+    <metadata connector="FLOW" name="ProjL_error">
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="listextracted3.ERROR_CODE == null" name="Contractor" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="listextracted3.id " name="id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted3.ContractorNo " name="ContractorNo" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted3.ContractorName " name="ContractorName" nullable="true" type="id_String"/>
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="listextracted2.ERROR_CODE == null" name="Project" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="listextracted2.id " name="id" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted2.ProjectContractNo " name="ProjectContractNo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted2.ProjectName " name="ProjectName" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted2.ProjectValue " name="ProjectValue" nullable="true" type="id_Double"/>
       </outputTables>
-      <outputTables activateExpressionFilter="true" expressionFilter="listextracted3.ERROR_CODE != null" name="ConL_error" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="listextracted3.Body" name="Body" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="listextracted3.ERROR_CODE" name="ERROR_CODE" nullable="true" type="id_Integer"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="listextracted2.ERROR_CODE != null" name="ProjL_error" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="listextracted2.Body" name="Body" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="listextracted2.ERROR_CODE" name="ERROR_CODE" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="listextracted3" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="listextracted2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="id" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ContractorNo" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ContractorName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ProjectContractNo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ProjectName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ProjectValue" nullable="true" type="id_Double"/>
         <mapperTableEntries name="Body" nullable="true" type="id_String"/>
         <mapperTableEntries name="ERROR_CODE" nullable="true" type="id_Integer"/>
       </inputTables>
@@ -247,7 +258,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;globalMap.put(&quot;BodyMessage&quot;, input_row.Body);&#10;globalMap.put(&quot;ErrorCode&quot;, input_row.ERROR_CODE);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="ConL_error"/>
+    <elementParameter field="TEXT" name="LABEL" value="ProjL_error"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
       <column key="false" length="0" name="Body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -256,17 +267,18 @@
   </node>
   <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
-    <elementParameter field="TEXT" name="LABEL" value="contractorlist"/>
+    <elementParameter field="TEXT" name="LABEL" value="ProjectList"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tBufferOutput_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ContractorName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectContractNo" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProjectValue" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDie_1"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;API contractor-list failed to retrieve. Error Message: &quot; + (String)globalMap.get(&quot;BodyMessage&quot;)"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;API project-list failed to retrieve. Error Message: &quot; + (String)globalMap.get(&quot;BodyMessage&quot;)"/>
     <elementParameter field="TEXT" name="CODE" value="(Integer)globalMap.get(&quot;ErrorCode&quot;) "/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
     <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
@@ -274,21 +286,21 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <connection connectorName="FLOW" label="contractorlist" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
+  <connection connectorName="FLOW" label="projectlist" lineStyle="0" metaname="tREST_1" offsetLabelX="0" offsetLabelY="0" source="tREST_1" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="contractorlist"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="projectlist"/>
   </connection>
-  <connection connectorName="FLOW" label="listextracted3" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tMap_1">
+  <connection connectorName="FLOW" label="listextracted2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="listextracted3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="listextracted2"/>
   </connection>
-  <connection connectorName="FLOW" label="Contractor" lineStyle="0" metaname="Contractor" offsetLabelX="-39" offsetLabelY="45" outputId="1" source="tMap_1" target="tBufferOutput_1">
+  <connection connectorName="FLOW" label="Project" lineStyle="0" metaname="Project" offsetLabelX="-23" offsetLabelY="50" outputId="1" source="tMap_1" target="tBufferOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Contractor"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Project"/>
   </connection>
-  <connection connectorName="FLOW" label="ConL_error" lineStyle="0" metaname="ConL_error" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJavaRow_1">
+  <connection connectorName="FLOW" label="ProjL_error" lineStyle="0" metaname="ProjL_error" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ConL_error"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ProjL_error"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tDie_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tJavaRow_1_NB_LINE&quot;)) &gt; 0"/>
@@ -297,7 +309,7 @@
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tREST_1"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Validate API Contractore List"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Validate API Project List"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -308,13 +320,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_913fda2d-4558-49dd-bc2c-bfb4329f1866"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+TaSLnDhPl21vIgdViwc8y3Zh6BSLNBosF7dJI7VOa7vMEqJVqcGkhDVwLB2QNkiJJ9ihBGq4T2C
-6i0496TuUw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d00659ae-a3b5-4beb-aed6-cdcf67029151"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hK5LJEf/3WSj2MG7XF8lRQr1tofFw4FFDZa4WLa3Lqpgck5Cw9z+uyHUKgtKKkujFck24/82fA2+
-wWDc859uFg==</DigestValue></Reference></SignedInfo><SignatureValue>LUTrH4Ms6w/emAfZrou7gYwur8DYaQnLSECvgRliztkDESNGvJ6AaVSOZCJ8wIfQh7EjpjJaLcVF
-Ng2Hoaj730HZB9rKFjIvp/6xs8QPsumE8rGkXlVhbP76PYZVIOzuy/qXuj9iybVuF+ozcdS/SfB/
-pQSOyB9WmtwJoyE1+jYcUGda/ZaObQrOb9/bKBAADS6k83+ecIXCRi+O7o11dWZt0I7yn2FRv2XU
-Bl2C0Ue4CKWMHyt2xyRAAEXGymoHWMo7GjPf4Wb6NHiuz0R07r2Im9CXiLHJxFZBDwrQ0KzQvnqo
-Dqgm4644NtAjPK35BhYgf5ZjrHlAz/cd7qTDNA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_39a1fdcf-b8c1-4246-b20e-078d846ee3af"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Jk4F1I0vc/0Z7bpvnWKA0iBvkRiX+Jy9TWo6AKCwu2Qoe3M3dpZgQda4peR/uU7+I36aExmxfvsp
+/xhUrMPtNg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_986d2d7f-e27f-4a48-9064-8f93ad75299b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rOZS7cV2sCakiTYBppS81NwGcjjs5uPiDNcEhG7d1Ps8B/dqyVLqPZHI/SUZgllhSCGzwev9tY5D
+cCPNNV/oVw==</DigestValue></Reference></SignedInfo><SignatureValue>RcFBAvZblQLEoayJUzgYZ+5+V4mIsgm+KScjdCVEViVVAFJdqqkOs+lJLrmczTAp79RHXFnHGfDv
+ZSSRTNCx2m0Eh5b5HKfJ/FPB+HPSrJ0LXVnduh9h8QpUXcz3+rr5EaMLMoYGIEppAmQL8somHLdw
+vzKS2FKiYUiabIO+bD4N8VGUbnUp4+TYeGH2zVA9eEnHaE/NqJTAz9I2GvjzvzN+NjEOiyfwZxqM
+e4xH0eJ8cDICnMJSBJoKy4XIFgkDFuD7kA5rRW706vqCefmjvSkdkcKAFwriOPDKVyyfQUn0ac/o
+/dKBHWKMpWRgemK2b4KCj9VjGmGtlXQ/eM3E3Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -336,4 +348,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d00659ae-a3b5-4beb-aed6-cdcf67029151" Target="#_913fda2d-4558-49dd-bc2c-bfb4329f1866"><Timestamp>2021-07-21 14:50:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_986d2d7f-e27f-4a48-9064-8f93ad75299b" Target="#_39a1fdcf-b8c1-4246-b20e-078d846ee3af"><Timestamp>2021-07-23 01:30:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

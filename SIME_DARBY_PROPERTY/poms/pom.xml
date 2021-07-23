@@ -10,10 +10,10 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
-    <module>jobs/process/API_Validation/project_claims_list_0.1</module>
-    <module>jobs/process/API_Validation/project_contractor_list_0.1</module>
-    <module>jobs/process/API_Validation/project_list_0.1</module>
-    <module>jobs/process/API_Validation/project_progress_list_0.1</module>
+    <module>jobs/process/Project/Claim/API_Validation/project_claims_list_0.1</module>
+    <module>jobs/process/Project/Claim/API_Validation/project_contractor_list_0.1</module>
+    <module>jobs/process/Project/Claim/API_Validation/project_list_0.1</module>
+    <module>jobs/process/Project/Claim/API_Validation/project_progress_list_0.1</module>
     <module>jobs/process/a_claims_submission_0.1</module>
     <module>jobs/process/apitestconnection_0.1</module>
     <module>jobs/process/b_document_submission_0.1</module>
