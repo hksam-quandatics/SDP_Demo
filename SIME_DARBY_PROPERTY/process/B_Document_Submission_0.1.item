@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" internalId="_ZPkwIOrYEeu_LOoPyVMwTw" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:dvvLMH3XdeiDd2Fo0TksKgVm1ul9V5q/lb9TtpKngbh4MuL/Euy2575W0uE+56lS63XPfQPqaWqeFkGgJXBTYx3AZBCic5VjTCKDqcJQUXs+2g=="/>
+    <contextParameter comment="" internalId="_ZPkwIOrYEeu_LOoPyVMwTw" name="authorization_code" prompt="authorization_code?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:1pyH6bwj38tDEIaGnyWZ8G8lxA4k8WKFTk6bbA18KY3Wu2AP7W6ZhL77JjTt1wfGpQt3bZ/hTuhefHE7sR34jVJNnpNnDpFqe2LIOstDniggGQ=="/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sQXFl/9rkHOS2xqy9I3aS3G6pirSOICTOG2+cQw4"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:qpccHt2AFpG6M24W9oi1iCqs7XYZGFjzhpNNQcUR"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:S/6insoLPkk7VLAWcRJ1fE+YeVYWR4830GhvbiIC"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aqdgecFZO5cEqhausCtIHs05EfxW4KAqJgOyrASJ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -187,7 +187,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BvE+m49x5UBonbUc8MJVRrqdTFEPBUZIWQXz5ZKdhsXPlPOYG4OrLiPjgot8YqVbTEy1G5jYtA=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:CLHf3OvGdPWo0duJ/SDcYRqeIwws6EyCPF7jdYITsGra+FIy4sXcKK3dsVBiTM2muNFO3cPwaQ=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeTpIOSuEeuXL6oPtoOpOA - pm_project"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_project&quot;"/>
@@ -312,7 +312,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="procodeUpdates">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ProjectClaim" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Amount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Progress" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -324,7 +324,7 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="procodeUpdates" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Integer.valueOf(row8.id) " name="id" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row8.Date" name="Date" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.formatDate(&quot;&quot;,row8.Date)" name="Date" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row8.ProjectClaim" name="ProjectClaim" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row8.Amount" name="Amount" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="Integer.valueOf(row8.Progress)" name="Progress" nullable="true" type="id_Integer"/>
@@ -394,7 +394,7 @@
       <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;application/json&quot;"/>
     </elementParameter>
-    <elementParameter field="MEMO" name="BODY" value="&quot;{\&quot;id\&quot;: 1,\&quot;Date\&quot;: \&quot;Tue Jul 13 15:45:12 UTC 2021\&quot;,\&quot;ProjectClaim\&quot;: \&quot;Elmina Green 4A-Claim-001\&quot;,\&quot;Amount\&quot;: \&quot;1000000.0\&quot;,\&quot;Progress\&quot;: 5,\&quot;Project\&quot;: 1,\&quot;ClaimStatus\&quot;: 3}&quot;"/>
+    <elementParameter field="MEMO" name="BODY" value="&quot;&#13;&#10;   {&#13;&#10;        \&quot;id\&quot;: &quot;+ ((String)globalMap.get(&quot;procodeUpdates.id&quot;))+&quot;,&#13;&#10;        \&quot;Date\&quot;: \&quot;&quot; + ((String)globalMap.get(&quot;procodeUpdates.Date&quot;)) + &quot;\&quot;,&#13;&#10;        \&quot;ProjectClaim\&quot;: \&quot;&quot; +((String)globalMap.get(&quot;procodeUpdates.ProjectClaim&quot;)) + &quot;\&quot;,&#13;&#10;        \&quot;Amount\&quot;: \&quot;&quot; + ((Double)globalMap.get(&quot;procodeUpdates.Amount&quot;)) + &quot;\&quot;,&#13;&#10;        \&quot;Progress\&quot;: &quot; +((String)globalMap.get(&quot;procodeUpdates.Progress&quot;)) + &quot;,&#13;&#10;        \&quot;Project\&quot;: &quot; +((String)globalMap.get(&quot;procodeUpdates.Project&quot;)) + &quot;,&#13;&#10;        \&quot;ClaimStatus\&quot;: &quot;+((Integer)globalMap.get(&quot;procodeUpdates.ClaimStatus&quot;)) +&quot;&#13;&#10;    }&#13;&#10;&quot;&#13;&#10;"/>
     <elementParameter field="TEXT" name="LABEL" value="POST"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tREST_1">
@@ -533,7 +533,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2iT42IBLDAvJAc3uK919yGGGhH1pIB9ecCHp6QqYcyQ3itWnFmmhOSgdnDZugdkwO571Tnb9BA=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m7zKaY2gvJjXpwIXGvB1jSX8bdOdJWmmm8gU8twVRiM670D89cYHXCbEDzh1zDW0aW6QjDf1/w=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeTpIOSuEeuXL6oPtoOpOA - pm_claims"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_claims&quot;"/>
@@ -726,7 +726,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nrA6MiWvhpuqm1XZ/dDNLumyZErBaYK8cULaO1NdM6F+5ixSH+4SjnYE2OhPRW9eoEYAnLlHXA=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LsLoLT4Tzl+8SrpbBspaxpFYeH+8TWaJqzrpC4J8pNAvaPG9zNDclzCzg205udPA+W5GTHOHIA=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_MeTpIOSuEeuXL6oPtoOpOA - pm_certificate"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_certificate&quot;"/>
@@ -1074,7 +1074,7 @@
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendpoc01&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;talendremote@middlewarepocdb&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2fCGTm6IqlC0mg/5rbgpslLUDww/sRHa/70y48I/BmMkbDoBMMwTnYoD+CjdYjSR7ByXbhYZpg=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qhHZlIhStfLDWK6+yHSyPx3nKihdnda5J3cOCdyRTTDAYqzn5T4As7XZBVg3D9LIHdEkJu02AA=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;pm_claims&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
@@ -1641,13 +1641,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1a65ee0d-401c-4680-8a18-d7bfc49d9f3f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dmSRf2M5KbofwNr35kOdsNijIe43xWXSCUinP7Hoi4XCFgIBcJbpy1vWpBI/wVB6gLXbuwEoaXAV
-3eGPa8s7kQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2d1a6cb8-1705-43b3-976d-c2951da8680f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NAJfrxdG6py/6DzhX+z3g7HdbUMHTjIPeBfsH28XAabHbUZ2Vp/tNI0eIEJ74r5+cjh/8Ntm1EW4
-N4hbMM0tbw==</DigestValue></Reference></SignedInfo><SignatureValue>gvDHIVi3m2Xvazjl7Xc4dOLXti+aQCT9awFQgxj0Tz7UorHkH3+qBfW7USxs63OM0OCEYnTSiCud
-/MIXdOA/WFgnc4AsBO2gRDzO5J8qxv3I5/1UDaBlC1wiiw1zyeGSBLfujyPyb3akIjEwjtWoYGfI
-89fS5d/ATbqT+QHhjGSiHsiP1b/S5Ds5IvGBAiq08tuZjt5J7N2osZz6bfj6FqzZZj16qwuB1cXV
-ryZscW7rFAhSTHlUdz4+qlRVbMvsBN32x8Wynt84PKoOwI06YOMxbehyqbzJwCPgB/WftOWRsurU
-BSa+dOHQHjiGDPDU0/eG0OMfg/K4MZoEP7bRIQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_81ff581c-6764-41ae-b97f-0fddbadbfbc7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>R1xR5t20cgHZnW1bT/IAmNRLfbQ1GVC3aW8AR9UV8me8RGzZzYpvqU4KKZGy2M4vUBryXeXtfirG
+WwRVNhAvfQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5e8fb668-79f1-4562-8564-847695cdee04"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jhDOj7HpFdtjt/Lgj2tjAgSZSIqzmC24dOx6onF403cnoc41gO2yzWOyRoY6vZCSTAKqe0/BZhSB
+IRjJudY2OA==</DigestValue></Reference></SignedInfo><SignatureValue>pTr4vvX1lDoCv6KuthpUkcn5v6KVDP8YQ3tV1kESBlxg1roQw7BONgZCxO3xsm61I0Xr9UhAUDlO
+MjlBQZ3z5NC8yrWJ2X2ps6O//wGOB8+DmOyH8FI8mZZ+rnQ9nMsSu9o4uUSvt0gzKhIWXY2nNq2x
+JoV7RaLvdUEewGbPYN+7vkbaMKZB7guFmmdo6DPsNTWkjxvmrB+B/s+Sg5uhtpJ6Lq/uYrZ4CWf/
+6z+hCtYaUQOf3EybxKnOEXzxttxxZuKdeF7B9ziXqMse7XeXrhe3bSdkzoSote3G0QQFtgiT1or6
+8Vhsg/kMEqfK8+OYVvUDV0Rxq8xJAzaSSuQjAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1669,4 +1669,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2d1a6cb8-1705-43b3-976d-c2951da8680f" Target="#_1a65ee0d-401c-4680-8a18-d7bfc49d9f3f"><Timestamp>2021-07-23 03:11:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5e8fb668-79f1-4562-8564-847695cdee04" Target="#_81ff581c-6764-41ae-b97f-0fddbadbfbc7"><Timestamp>2021-07-23 03:19:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
