@@ -14,11 +14,11 @@
     <module>jobs/process/Project/Claim/API_Validation/project_contractor_list_0.1</module>
     <module>jobs/process/Project/Claim/API_Validation/project_list_0.1</module>
     <module>jobs/process/Project/Claim/API_Validation/project_progress_list_0.1</module>
+    <module>jobs/process/Project/Claim/masterjob_0.1</module>
     <module>jobs/process/Project/a_claims_submission_webhook_0.1</module>
     <module>jobs/process/a_claims_submission_0.1</module>
     <module>jobs/process/apitestconnection_0.1</module>
     <module>jobs/process/b_document_submission_0.1</module>
-    <module>jobs/process/masterjob_0.1</module>
     <module>jobs/process/reset_environment_0.1</module>
     <module>jobs/process/retrieve_process_blob_0.1</module>
     <module>jobs/process/webhook_trigger_0.1</module>
