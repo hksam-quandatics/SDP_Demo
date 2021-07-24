@@ -225,5 +225,17 @@
     "id" : "SIME_DARBY_PROPERTY:_EwISsOojEeu5crR_iIBs7A",
     "version" : "Latest",
     "type" : "job"
+  }, {
+    "id" : "_MeTpIOSuEeuXL6oPtoOpOA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_wphJAOSsEeuXL6oPtoOpOA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_MeTpIOSuEeuXL6oPtoOpOA - pm_claims",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
