@@ -21,7 +21,6 @@
     <module>jobs/process/Project/a_claims_submission_webhook_0.1</module>
     <module>jobs/process/apitestconnection_0.1</module>
     <module>jobs/process/reset_environment_0.1</module>
-    <module>jobs/process/webhook_trigger_0.1</module>
   </modules>
   <properties>
     <signer.version>7.3.1</signer.version>
