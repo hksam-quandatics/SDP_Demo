@@ -233,16 +233,6 @@
       <version>1.0-1</version>
     </dependency>
     <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>1.13</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-core</artifactId>
-      <version>1.13</version>
-    </dependency>
-    <dependency>
       <groupId>org.talend.components.lib</groupId>
       <artifactId>job-audit</artifactId>
       <version>1.4</version>
@@ -381,11 +371,6 @@
       <groupId>org.example.sime_darby_property.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sime_darby_property.job</groupId>
-      <artifactId>Project_Claims_List</artifactId>
-      <version>0.1.0</version>
     </dependency>
   </dependencies>
   <build>
